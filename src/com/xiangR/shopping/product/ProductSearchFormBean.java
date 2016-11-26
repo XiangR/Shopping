@@ -1,0 +1,92 @@
+package com.xiangR.shopping.product;
+
+
+//DTO Data Transfer Object
+//通过显示层传递到了业务层
+
+public class ProductSearchFormBean {
+	private int categoryId;
+	private String keyWord;
+
+	private double lowNormalPrice;
+
+	private double highNormalPrice;
+
+	private double lowMemberPrice;
+
+	private double highMemberPrice;
+
+	private String startDate;
+
+	private String endDate;
+
+	public String getKeyWord() {
+		return keyWord;
+	}
+
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
+	}
+
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public double getHighMemberPrice() {
+		return highMemberPrice;
+	}
+
+	public void setHighMemberPrice(double highMemberPrice) {
+		this.highMemberPrice = highMemberPrice;
+	}
+
+	public double getHighNormalPrice() {
+		return highNormalPrice;
+	}
+
+	public void setHighNormalPrice(double highNormalPrice) {
+		this.highNormalPrice = highNormalPrice;
+	}
+
+	public double getLowMemberPrice() {
+		return lowMemberPrice;
+	}
+
+	public void setLowMemberPrice(double lowMemberPrice) {
+		this.lowMemberPrice = lowMemberPrice;
+	}
+
+	public double getLowNormalPrice() {
+		return lowNormalPrice;
+	}
+
+	public void setLowNormalPrice(double lowNormalPrice) {
+		this.lowNormalPrice = lowNormalPrice;
+	}
+	public String getEndDate() {
+		if(this.endDate == null) return "";
+		else return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+
+	public String getStartDate() {
+		if(this.startDate == null) return "";
+		else return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+	
+	public boolean validate () {
+		return true;
+	}
+
+}
