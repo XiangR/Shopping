@@ -1,4 +1,4 @@
-#Êı¾İ¿âÃüÃûÈ«²¿Ğ¡Ğ´
+#æ•°æ®åº“å‘½åå…¨éƒ¨å°å†™
 create database shopping;
 
 use shopping;
@@ -16,11 +16,11 @@ rdate datetime
 create table category
 (
 id int primary key auto_increment,
-pid int, #pidÎª0µÄÊÇ×î¶¥²ã½Úµã
+pid int, #pidä¸º0çš„æ˜¯æœ€é¡¶å±‚èŠ‚ç‚¹
 name varchar(255), 
 descr varchar(255),
-cno int, #×î¶àÈı²ã, Ã¿²ãÕ¼Á½Î», ×î¶à99¸ö×Ó½Úµã
-grade int #´ú±í¼¶±ğ, ´Ó1¿ªÊ¼
+cno int, #æœ€å¤šä¸‰å±‚, æ¯å±‚å ä¸¤ä½, æœ€å¤š99ä¸ªå­èŠ‚ç‚¹
+grade int #ä»£è¡¨çº§åˆ«, ä»1å¼€å§‹
 );
 
 create table product
