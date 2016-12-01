@@ -176,6 +176,7 @@ public class UserManager {
 		
 		return false;
 	}
+	
 	public static boolean isPasswordCorrect(String username, String password) {
 
 		List<User> list = UserManager.getUser();

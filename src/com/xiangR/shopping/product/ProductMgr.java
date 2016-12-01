@@ -20,10 +20,18 @@ public class ProductMgr {
 	
 	private ProductMgr() {
 	}
+	
 	public static ProductMgr getInstance() {
 		return pm;
 	}
 	
+	public Product loadById(int id) {
+		return dao.loadById(id);
+	}
+	
+	public boolean deleteById(int id) {
+		return dao.deleteById(id);
+	}
 	
 	public ProductDAO getDao() {
 		return new ProductMysqlDAO();
@@ -45,9 +53,11 @@ public class ProductMgr {
 	public int getProducts(List<Product> products, int pageNo, int pageSize) {
 		return dao.getProducts(products, pageNo, pageSize);
 	}
+	
 	public int sizeProducts() {
 		return dao.sizeProducts();
 	}
+	
 	public List<Product> findProducts(int[] categoryId,
 									  String keyWord,
 									  double lowNormalPrice,
@@ -68,6 +78,7 @@ public class ProductMgr {
 	public boolean addProduct(Product p) {
 		return dao.addProduct(p);
 	}
+	
 	public boolean deleteProductByCategoryById(int categoryId) {
 		return false;
 	}
@@ -78,7 +89,13 @@ public class ProductMgr {
 	}
 	
 	public boolean updateProduct(Product p) {
-		return false;
+		return dao.updateProduct(p);
 	}
 
+	public List<Product> getLatestProducts(int count) {
+		return dao.getLatestProducts(count);
+	}
+	public int find(List<Product> products, int pageNo, int pageSize, int categoryId) {
+		return dao.find(products, pageNo, pageSize, categoryId);
+	}
 }

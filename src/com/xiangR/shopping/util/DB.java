@@ -59,10 +59,10 @@ public class DB {
 		}
 	}
 
-	public static PreparedStatement prepare(Connection conn, String sql) {
+	public static PreparedStatement prepare(Connection conn, String sql, boolean generateKey) {
 		PreparedStatement pstmt = null;
 		try {
-			conn.prepareStatement(sql);
+			pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
