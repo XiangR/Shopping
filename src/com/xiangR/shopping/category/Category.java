@@ -1,6 +1,8 @@
 package com.xiangR.shopping.category;
 
 public class Category {
+	//类别的实体类
+	
 	public static final int MAX_GRADE = 3;
 	
 	private int id;

@@ -51,6 +51,15 @@ public class CategoryDAO {
 	 */
 	private static void getCategories(List<Category> list, int id) {
 		Connection conn = null;
+		try {
+			conn = DB.getConnection();
+			getCategories(conn, list, id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	// 由上面的方法调用 来防止建立过多的 conn 连接
+	private static void getCategories(Connection conn, List<Category> list, int id) {
 		Statement stmt = null;
 		try {
 			conn = DB.getConnection();
