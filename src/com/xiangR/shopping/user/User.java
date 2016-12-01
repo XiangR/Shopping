@@ -1,4 +1,4 @@
-package com.xiangR.shopping.user;
+﻿package com.xiangR.shopping.user;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +16,7 @@ public class User {
 	private String password;
 	private String phone;
 	private String addr;
+	// 为其在初始化即设定时间
 	private Date rdate = new Date();
 	
 	public User() {
